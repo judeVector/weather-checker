@@ -5,8 +5,9 @@ import requests
 
 load_dotenv()
 
+
 def get_current_weather(city="Abu Dhabi"):
-    requests_url = f"https://api.openweathermap.org/data/2.5/weather?q={city}&appid={os.getenv("API_KEY")}&units=metric"
+    requests_url = f"https://api.openweathermap.org/data/2.5/weather?q={city}&appid={os.getenv('API_KEY')}&units=metric"
     weather_data = requests.get(requests_url).json()
     return weather_data
 
